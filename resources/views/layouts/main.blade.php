@@ -17,34 +17,43 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
     </head>
-    <body >
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navbar">
-                     <a href="/" class="navbar-brand">
-                        <img src="/img/hdcevents_logo.svg" alt="HDC Events">
-                    </a>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/events/create" class="nav-link">Criar Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Entrar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Cadastrar</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+    <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="collapse navbar-collapse" id="navbar">
+            <a href="/" class="navbar-brand">
+              <img src="/img/hdcevents_logo.svg" alt="HDC Events">
+            </a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="/" class="nav-link">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a href="/events/create" class="nav-link">Criar Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a href="/" class="nav-link">Entrar</a>
+              </li>
+              <li class="nav-item">
+                <a href="/" class="nav-link">Cadastrar</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            @if(session('msg'))
+              <p class="msg">{{ session('msg') }}</p>
+            @endif
             @yield('content')
-        <footer>
-            <p>HDC Events &copy; 2024</p>
-        </footer>
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>HDC Events &copy; 2020</p>
+      </footer>
+      <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     </body>
 </html>
