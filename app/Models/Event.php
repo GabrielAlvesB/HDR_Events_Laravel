@@ -12,4 +12,10 @@ class Event extends Model
     protected $casts = [
         'items' => 'array'
     ];
+
+    protected $date = ['date'];
+
+    public function user(){
+        return $this->belogsTo('App\Models\User');
+    }
 }
